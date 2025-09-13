@@ -8,9 +8,10 @@ export default function Home() {
     <div className="font-sans  flex flex-col h-screen items-center">
       <NavBar />
 
-      <div className="flex  justify-center border-2 gap-3.5 border-amber-400 h-5/6 w-5xl" >
-        <News />
+      <div className="flex  justify-center  gap-3.5 border-amber-400 h-5/6 w-5xl" >
+       
         <CurrencyConverter />
+         <News />
 
       </div>
 
