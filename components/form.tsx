@@ -3,6 +3,7 @@ import React from 'react'
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import Radio from '@/components/ui/radio'
+import Radio2 from '@/components/ui/radio2'
 
 export default function form() {
   return (
@@ -14,7 +15,7 @@ export default function form() {
         </div>
         <div className='flex flex-col  h-28  justify-between ml-5'>
           <Radio></Radio>
-          <Radio></Radio>
+          <Radio2></Radio2>
         </div>
 
       </div>
