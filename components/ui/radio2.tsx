@@ -1,6 +1,11 @@
 "use client"
 
 import * as React from "react"
+import { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux';
+import { RootState } from '@/redux/store';
+import { useDispatch } from "react-redux";
+import { setSecondCurenncy } from "@/redux/currencySlice";
 
 import { Button } from "@/components/ui/button"
 import {
@@ -14,9 +19,18 @@ import {
 } from "@/components/ui/dropdown-menu"
 
 export default function DropdownMenuRadioGroupDemo() {
-  const [ Currency, setCurrency] = React.useState("USD")
-  console.log(Currency);
-
+  const coins = useSelector((state: RootState) => state);
+    const dispatch =  useDispatch();
+    const [ Currency, setCurrency] = React.useState("USD")
+    console.log(Currency);
+    function currHandler(){
+      if(Currency){
+        dispatch((setSecondCurenncy(Currency)))
+      }
+    }
+    useEffect(() => {
+      currHandler()
+    }, []);
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -26,8 +40,8 @@ export default function DropdownMenuRadioGroupDemo() {
         <DropdownMenuLabel>Currency</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuRadioGroup value={Currency} onValueChange={setCurrency}>
-          <DropdownMenuRadioItem value="Bitcoin">Bitcoin</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="ETH">ETH</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="bitcoin">Bitcoin</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="ethereum">ETH</DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="USD">USD</DropdownMenuRadioItem>
         </DropdownMenuRadioGroup>
       </DropdownMenuContent>

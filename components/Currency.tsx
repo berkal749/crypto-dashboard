@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import Form from './form'
 import Result from './result'
