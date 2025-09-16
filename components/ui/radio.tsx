@@ -17,10 +17,11 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 export default function DropdownMenuRadioGroupDemo() {
+  const [ Currency, setCurrency] = React.useState("USD")
   const coins = useSelector((state: RootState) => state);
   const dispatch =  useDispatch();
-  const [ Currency, setCurrency] = React.useState("USD")
-  console.log(Currency);
+  
+  
   function currHandler(){
     if(Currency){
       dispatch((setFirstCurrency(Currency)))
@@ -28,7 +29,7 @@ export default function DropdownMenuRadioGroupDemo() {
   }
   useEffect(() => {
         currHandler()
-      }, []);
+      }, [Currency]);
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>

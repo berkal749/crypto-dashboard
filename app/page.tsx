@@ -14,7 +14,7 @@ export default function Home() {
 
       <div className="flex  justify-center  gap-3.5 border-amber-400 h-135 w-5xl" >
 
-        <CurrencyConverter />
+        <CurrencyConverter  />
         <News />
 
       </div>

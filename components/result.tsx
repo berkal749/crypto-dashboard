@@ -22,17 +22,17 @@ export default function result() {
       }
 
       const data = await response.json(); // Added 'await'
-      console.log(data);
+      console.log(JSON.stringify(data));
       setCoin(data);
 
-    } catch (error) {
+    } catch (error) { 
       console.error("Error:", error);
     }
   }
   useEffect(() => {
     
     fetchData();
-    setResultCurrency();
+    setResultCurrency(coin);
   }, []); 
   return (
     <div className='bg-neutral-800 h-5 w-9/10 flex flex-col items-center  gap-5 justify-center h-56 rounded-xl'>
