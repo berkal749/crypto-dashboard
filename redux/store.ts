@@ -1,10 +1,12 @@
 
 import { configureStore } from "@reduxjs/toolkit";
 import currencyReducer from "./currencySlice";
+import unitsReducer from "./weightSlice";
 
 export const store = configureStore({
   reducer: {
-    currency: currencyReducer
+    currency: currencyReducer,
+    units:unitsReducer,
   }
 });
 

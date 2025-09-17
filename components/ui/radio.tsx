@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import { RootState } from '@/redux/store';
 import { useDispatch } from "react-redux";
-import { setFirsteight } from "@/redux/currencySlice";
+import { setFirstCurrency } from "@/redux/currencySlice";
 import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,

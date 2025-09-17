@@ -32,7 +32,7 @@ export default function result() {
   useEffect(() => {
     
     fetchData();
-    setResultCurrency(coin);
+  setResultCurrency(coin);
   }, []); 
   return (
     <div className='bg-neutral-800 h-5 w-9/10 flex flex-col items-center  gap-5 justify-center h-56 rounded-xl'>
